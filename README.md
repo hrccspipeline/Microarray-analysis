@@ -12,7 +12,15 @@ Microarray dataset in a .csv format.
 
 Differential expression of genes can be obtained using GeneSpring GX software V 12.6, Silicon Genetics, Redwood City, CA. Differential expression tests considered significant if differences in expression between the groups with a fold-change of 1.5 and greater, and t-test p-values were less than 0.05. To identify differential expression of probes with a fold-change of 1.5 assigned as cutoff, an unpaired T-test by computing asymptotic p-values, adjusted for multiple testing by using the false discovery rate (FDR) or Benjamini and Hochberg method. The probe sets can be further narrowed to corresponding genes with FDR (q less than 0.05) to bypass the problem of probes mapping to multiple genes. These passing the threshold can be called differentially expressed genes (DEGs). 
 
+#### Biotype categorization
 
+The differential expression gene list obtained from the previous step contains information pertaining probename, geneID, p(Corr),Fc(abs), Regulation. This csv file is converted to text file and execute the script (BiotypeFromGtfs.sh) to obtain the list of genenames along with the resective biotypes.
+
+Script : BiotypeFromGtf.sh
+
+To run the script : $bsub < BiotypeFromGtf.sh 
+
+BiotypeFromGtf.sh  :https://github.com/hrccspipeline/HRCCSPipeline/blob/master/scripts/BiotypeFromGtf.sh 
 
 #### LINCRNA AND TARGETS 
 
