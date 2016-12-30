@@ -30,20 +30,21 @@ BiotypeFromGtf.sh  :https://github.com/hrccspipeline/HRCCSPipeline/blob/master/s
 
 Extract all lincRNAs, chromosome and their genomic coordinates from step 10 and put them in a file called PC.txt. Extract all protein coding genes, chromosome and their genomic coordinates from step 10 and put them in a file called PC.txt. Use the script called lincToPc.pl to identify the neighboring expressed protein coding genes
 
-###Example for lincRNA and target
+###Example to detect targets for lincRNA
 
-Sample lincRNA.txt : SamplelincRNA.txt (Includes four fields  : lincRNA, chromosome number, start, end ) HRCCSPipeline/HRCCSPipeline/lincRNA.txt
+Step 1 : Download the sample lincRNA.txt : SamplelincRNA.txt (Includes four fields  : lincRNA, chromosome number, start, end ) https://github.com/hrccspipeline/HRCCSPipeline/blob/master/HRCCSPipeline/lincRNA.txt
 
-Sample PC.txt : SamplePC.txt (Includes four fields  : PC, chromosome number, start, end ) HRCCSPipeline/HRCCSPipeline/ProteinCoding.txt
+Step 2 : Download the sample PC.txt : SamplePC.txt (Includes four fields  : PC, chromosome number, start, end ) 
+https://github.com/hrccspipeline/HRCCSPipeline/blob/master/HRCCSPipeline/ProteinCoding.txt
 
 Script : lincToPC.pl
 
-To run the script : $bsub < lincToPC.pl OutputFileName
+Step 3: To run the script : $bsub < lincToPC.pl OutputFileName
 
 lincToPC.pl :https://github.com/hrccspipeline/HRCCSPipeline/blob/master/scripts/lincToPc.pl
 
-Sample OutputFile : SampleLincAndPC.txt (Includes lincRNA, Gene on the right, Gene on the left, DE Gene Name, Distance)HRCCSPipeline/HRCCSPipeline/LincToPC_Output.txt
-
+Step 4: Check the Sample OutputFile : SampleLincAndPC.txt (Includes lincRNA, Gene on the right, Gene on the left, DE Gene Name, Distance)
+https://github.com/hrccspipeline/HRCCSPipeline/blob/master/HRCCSPipeline/LincToPC_Output.txt
 
 #### ANTISENSE AND TARGETS 
 
