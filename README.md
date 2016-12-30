@@ -4,6 +4,10 @@
 
 This tutorial is to analyize microarray dataset, identify differential expression of genes, categorize into different biotypes (both protein coding and noncoding RNAs), then further identify potential targets(protein coding) for long noncoding RNAs like lincRNAs (long intergenic noncoding RNAs) and antisense. This pipeline can also be used to detect pseudogenes and their respective parent protein coding genes.
 
+###Software/Hardware requirements###
+
+A computer with a decent amount of RAM. Runtimes for Perl and the Bash shell. Basic command shell programming abilities for unix platform.
+
 ### Dataset
 
 Microarray dataset in a .csv format.
