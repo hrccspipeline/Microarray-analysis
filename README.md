@@ -6,7 +6,7 @@ This tutorial is to analyize microarray dataset, identify differential expressio
 
 ###Software/Hardware requirements###
 
-A computer with a decent amount of RAM. Runtimes for Perl and the Bash shell. Basic command shell programming abilities for unix platform.
+A computer with a decent amount of RAM. Runtimes for Perl and the Bash shell. BLAST installed. Basic command shell programming abilities for unix platform.
 
 ### Dataset
 
@@ -30,9 +30,11 @@ BiotypeFromGtf.sh  :https://github.com/hrccspipeline/HRCCSPipeline/blob/master/s
 
 Extract all lincRNAs, chromosome and their genomic coordinates from step 10 and put them in a file called PC.txt. Extract all protein coding genes, chromosome and their genomic coordinates from step 10 and put them in a file called PC.txt. Use the script called lincToPc.pl to identify the neighboring expressed protein coding genes
 
-Sample lincRNA.txt : SamplelincRNA.txt
+###Example for lincRNA and target
 
-Sample PC.txt : SamplePC.txt
+Sample lincRNA.txt : SamplelincRNA.txt (Includes four fields  : lincRNA, chromosome number, start, end ) HRCCSPipeline/HRCCSPipeline/lincRNA.txt
+
+Sample PC.txt : SamplePC.txt (Includes four fields  : PC, chromosome number, start, end ) HRCCSPipeline/HRCCSPipeline/ProteinCoding.txt
 
 Script : lincToPC.pl
 
@@ -40,7 +42,8 @@ To run the script : $bsub < lincToPC.pl OutputFileName
 
 lincToPC.pl :https://github.com/hrccspipeline/HRCCSPipeline/blob/master/scripts/lincToPc.pl
 
-Sample OutputFile : SampleLincAndPC.txt
+Sample OutputFile : SampleLincAndPC.txt (Includes lincRNA, Gene on the right, Gene on the left, DE Gene Name, Distance)HRCCSPipeline/HRCCSPipeline/LincToPC_Output.txt
+
 
 #### ANTISENSE AND TARGETS 
 
