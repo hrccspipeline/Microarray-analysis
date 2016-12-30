@@ -50,17 +50,20 @@ https://github.com/hrccspipeline/HRCCSPipeline/blob/master/HRCCSPipeline/LincToP
 
 Extract all Antisense RNAs, chromosome, strand and genomic coordinates from step 10 and put them in a file called asRNA.txt. Extract all protein coding genes chromosome, strand and genomic coordinates from step 10 and put them in a file called PC.txt. Use the script called AntisenseToPConOppositeStrand.pl to identify the neighboring expressed protein coding genes
 
-Sample asRNA.txt : SampleasRNA.txt
+###Example to detect targets for asRNAs
 
-Sample PC.txt : SamplePC.txt
+Step 1 : Download the sample asRNA.txt : SampleasRNA.txt https://github.com/hrccspipeline/HRCCSPipeline/blob/master/HRCCSPipeline/MouseAS.txt
+
+Step 2 : Download the sample PC file
+Sample PC.txt : SamplePC.txt https://github.com/hrccspipeline/HRCCSPipeline/blob/master/HRCCSPipeline/MouseGTF.txt
 
 Script : antiOppGene.pl
 
 antiOppGene.pl :https://github.com/hrccspipeline/HRCCSPipeline/blob/master/scripts/antiOppGene.pl
 
-To run the script : $bsub < antiOppGene.pl  OutputFileName
+Step 3 : To run the script : $bsub < antiOppGene.pl  OutputFileName
 
-Sample OutputFile : AsRNAOutput.txt
+Step 4 : Check the Sample OutputFile : AsRNAOutput.txt https://github.com/hrccspipeline/HRCCSPipeline/blob/master/HRCCSPipeline/OutputGenesOnOppStrand.txt
 
 #### PSEUDOGENE AND PARENT PROTEIN CODING GENE (TARGETS)
 
